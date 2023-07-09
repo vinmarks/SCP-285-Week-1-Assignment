@@ -1,0 +1,42 @@
+// Script Name: SCP_285_Week_1_Assignment
+// Title: Week 1 Assignment
+// Author: Vincent Marks
+// Date: July 8th 2023
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SCP_285_Week_1_Assignment
+{
+    class Conversion
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter temperature in Celsius: ");
+            double celsius = Convert.ToDouble(Console.ReadLine());
+            double fahrenheit = CelsiusToFahrenheit(celsius);
+            double fahrenheitRounded = Math.Round(fahrenheit, 2);
+            Console.WriteLine("The temperature in Fahrenheit is: " + fahrenheitRounded + " F");
+            Console.ReadLine();
+
+            Console.Write("Enter temperature in Fahrenhiet: ");
+            double fahrenheit2 = Convert.ToDouble(Console.ReadLine());
+            double celsius2 = FahrenheitToCelsius(fahrenheit2);
+            double celsius2Rounded = Math.Round(celsius2, 2);
+            Console.WriteLine("The temperature in Celsius is: " + celsius2Rounded + " C");
+            Console.ReadLine();
+        }
+
+        static double CelsiusToFahrenheit(double celsius)
+        {
+            return ((celsius * 9) / 5 + 32);
+        }
+        static double FahrenheitToCelsius(double fahrenheit2)
+        {
+            return ((fahrenheit2 - 32) * .5556);
+        }
+    }
+}
